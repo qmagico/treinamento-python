@@ -20,6 +20,11 @@ def index(name='Esquecidinho'):
 
 @route('/fatorial/<number>')
 def fatorial(number):
+    try:
+        int(number)
+    except:
+        return 'Ops! Isso não é um número válido!'
+
     return 'Fatorial de %s é %s' % (number, str(fat(int(number))))
 
 
